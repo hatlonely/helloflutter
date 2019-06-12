@@ -3,6 +3,7 @@ import 'helloworld.dart';
 import 'text.dart';
 import 'icon.dart';
 import 'image.dart';
+import 'button.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
 //      home: HelloWorldPage(),
 //      home: TextPage(),
 //      home: IconPage(),
-      home: ImagePage(),
+//      home: ImagePage(),
+      home: ButtonPage(),
     );
   }
 }
