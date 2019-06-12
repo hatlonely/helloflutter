@@ -41,6 +41,24 @@ class TextPage extends StatelessWidget {
               ],
             ),
           ),
+          RichText(
+            text: TextSpan(
+              text: "hello",
+              style: TextStyle(
+                color: Colors.green[100],
+              ),
+              children: [
+                TextSpan(
+                  text: " beautiful",
+                  style: TextStyle(fontStyle: FontStyle.italic),
+                ),
+                TextSpan(
+                  text: " world",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
