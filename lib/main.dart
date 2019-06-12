@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'helloworld.dart';
 import 'text.dart';
 import 'icon.dart';
+import 'image.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,8 +14,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: HelloWorldPage(),
-      home: IconPage(),
+//      home: HelloWorldPage(),
+//      home: TextPage(),
+//      home: IconPage(),
+      home: ImagePage(),
     );
   }
 }
