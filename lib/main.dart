@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'helloworld.dart';
 import 'text.dart';
+import 'icon.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: HelloWorldPage(),
-      home: TextPage(),
+      home: IconPage(),
     );
   }
 }
