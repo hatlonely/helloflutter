@@ -27,8 +27,47 @@ class ButtonPage extends StatelessWidget {
             backgroundColor: Colors.green[300],
             onPressed: () => print("floating action button"),
           ),
+          CustomPopupMenuButton(),
+          ButtonBar(
+            children: [
+              RaisedButton(child: Text("hello")),
+              RaisedButton(child: Text("hello")),
+              RaisedButton(child: Text("hello"))
+            ],
+          ),
         ],
       ),
+    );
+  }
+}
+
+class CustomPopupMenuButton extends StatefulWidget {
+  @override
+  createState() => CustomPopupMenuButtonState();
+}
+
+class CustomPopupMenuButtonState extends State<CustomPopupMenuButton> {
+  var _select = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<int>(
+      onSelected: (int val) {
+        setState(() {
+          print("popup menu item $val");
+          _select = val;
+        });
+      },
+      itemBuilder: (BuildContext context) {
+        return [
+          const PopupMenuItem<int>(value: 0, child: Text("zero")),
+          const PopupMenuItem<int>(value: 1, child: Text("one")),
+          const PopupMenuItem<int>(value: 2, child: Text("two")),
+          const PopupMenuItem<int>(value: 3, child: Text("three")),
+          const PopupMenuItem<int>(value: 4, child: Text("four")),
+        ];
+      },
+      icon: Icon(Icons.more),
     );
   }
 }
