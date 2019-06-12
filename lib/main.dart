@@ -4,6 +4,7 @@ import 'text.dart';
 import 'icon.dart';
 import 'image.dart';
 import 'button.dart';
+import 'input.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
 //      home: TextPage(),
 //      home: IconPage(),
 //      home: ImagePage(),
-      home: ButtonPage(),
+//      home: ButtonPage(),
+      home: InputPage(),
     );
   }
 }
