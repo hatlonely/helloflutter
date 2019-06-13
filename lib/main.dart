@@ -5,6 +5,7 @@ import 'icon.dart';
 import 'image.dart';
 import 'button.dart';
 import 'input.dart';
+import 'chip.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
 //      home: IconPage(),
 //      home: ImagePage(),
 //      home: ButtonPage(),
-      home: InputPage(),
+//      home: InputPage(),
+      home: ChipPage(),
     );
   }
 }
