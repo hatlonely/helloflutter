@@ -6,6 +6,7 @@ import 'image.dart';
 import 'button.dart';
 import 'input.dart';
 import 'chip.dart';
+import 'tooltip.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
 //      home: ImagePage(),
 //      home: ButtonPage(),
 //      home: InputPage(),
-      home: ChipPage(),
+//      home: ChipPage(),
+      home: TooltipPage(),
     );
   }
 }
