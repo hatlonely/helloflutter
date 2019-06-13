@@ -12,6 +12,7 @@ class InputPage extends StatelessWidget {
         CustomRadio(),
         CustomSwitch(),
         CustomSlider(),
+        CustomDatePicker(),
       ]),
     );
   }
@@ -21,7 +22,7 @@ class CustomTextField extends StatefulWidget {
   final String label;
 
   @override
-  createState() => new CustomTextFieldState();
+  createState() => CustomTextFieldState();
 
   const CustomTextField(this.label);
 }
@@ -193,18 +194,36 @@ class CustomSliderState extends State<CustomSlider> {
   }
 }
 
-//class CustomDatePicker extends StatefulWidget {
-//  @override
-//  createState() => CustomDatePickerState();
-//}
-//
-//class CustomDatePickerState extends State<CustomDatePicker> {
-//  var val = "";
-//
-//  @override
-//  Widget build(BuildContext context) {
-//    return TextField(
-//      value: val,
-//    );
-//  }
-//}
+class CustomDatePicker extends StatefulWidget {
+  @override
+  createState() => CustomDatePickerState();
+}
+
+class CustomDatePickerState extends State<CustomDatePicker> {
+  var val = "";
+
+  @override
+  Widget build(BuildContext context) {
+    return FlatButton(
+      child: const Text("flat button"),
+      color: Colors.green[100],
+      onPressed: () {
+        var dt = showDatePicker(
+          context: context,
+          initialDate: DateTime.now(),
+          firstDate: DateTime(2019, 1, 1),
+          lastDate: DateTime(2019, 12, 31),
+          builder: (BuildContext context, Widget child) {
+            return Theme(
+              data: ThemeData.dark(),
+              child: child,
+            );
+          },
+        );
+        dt.then((val) {
+          print(val);
+        });
+      },
+    );
+  }
+}
